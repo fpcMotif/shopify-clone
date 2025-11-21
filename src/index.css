@@ -1,0 +1,46 @@
+@import "tailwindcss";
+
+@theme {
+    /* Fonts */
+    --font-sans: "Inter", sans-serif;
+
+    /* Colors */
+    --color-shopify-green: oklch(86.6% 0.186 156.8);
+    --color-shopify-dark: oklch(1.8% 0.015 200);
+    --color-shopify-pine: oklch(13.5% 0.035 200);
+    --color-shopify-nav: oklch(1.8% 0.015 200 / 95%);
+
+    /* Animations */
+    --animate-scroll-x: scroll-x 40s linear infinite;
+
+    /* Keyframes */
+    @keyframes scroll-x {
+        0% {
+            transform: translateX(0);
+        }
+
+        100% {
+            transform: translateX(-100%);
+        }
+    }
+}
+
+/* Global Styles */
+body {
+    background-color: var(--color-shopify-dark);
+    color: white;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Hide scrollbar for chrome/safari/opera */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}

@@ -1,46 +1,91 @@
 @import "tailwindcss";
 
 @theme {
-    /* Fonts */
-    --font-sans: "Inter", sans-serif;
+	/* Fonts */
+	--font-sans: "Inter", sans-serif;
 
-    /* Colors */
-    --color-shopify-green: oklch(86.6% 0.186 156.8);
-    --color-shopify-dark: oklch(1.8% 0.015 200);
-    --color-shopify-pine: oklch(13.5% 0.035 200);
-    --color-shopify-nav: oklch(1.8% 0.015 200 / 95%);
+	/* Colors */
+	--color-shopify-green: oklch(86.6% 0.186 156.8);
+	--color-shopify-dark: oklch(1.8% 0.015 200);
+	--color-shopify-pine: oklch(13.5% 0.035 200);
+	--color-shopify-nav: oklch(1.8% 0.015 200 / 95%);
+	--color-surface: oklch(10% 0.015 200);
+	--color-surface-elevated: oklch(12% 0.015 200);
 
-    /* Animations */
-    --animate-scroll-x: scroll-x 40s linear infinite;
+	/* Container Widths */
+	--width-container: 1440px;
+	--breakpoint-2xl: 1440px;
 
-    /* Keyframes */
-    @keyframes scroll-x {
-        0% {
-            transform: translateX(0);
-        }
+	/* Spacing & Sizing */
+	--spacing-header-scroll: 1rem;
+	--spacing-header-default: 1.5rem;
+	--width-dropdown: 300px;
+	--height-hero: 110vh;
+	--height-feature-mobile: 400px;
+	--height-feature-desktop: 600px;
+	--height-globe-min: 500px;
+	--height-video-grid: 400px;
+	--size-globe-large: 600px;
+	--size-globe-small: 450px;
+	--size-blur-glow: 500px;
 
-        100% {
-            transform: translateX(-100%);
-        }
-    }
+	/* Z-Index Scale */
+	--z-background: 0;
+	--z-content: 10;
+	--z-overlay: 20;
+	--z-header: 50;
+
+	/* Line Heights */
+	--leading-tight-custom: 1.1;
+
+	/* Animation Durations */
+	--duration-globe-spin-slow: 60s;
+	--duration-globe-spin-fast: 40s;
+	--duration-animation-standard: 0.8;
+	--duration-animation-fast: 0.5;
+	--delay-animation-short: 0.4;
+
+	/* Opacity Values */
+	--opacity-secondary-image: 0.6;
+	--opacity-globe-map: 0.8;
+
+	/* Blur Values */
+	--blur-glow: 100px;
+
+	/* Animation Offsets */
+	--offset-y-standard: 50;
+
+	/* Animations */
+	--animate-scroll-x: scroll-x 40s linear infinite;
+
+	/* Keyframes */
+	@keyframes scroll-x {
+		0% {
+			transform: translateX(0);
+		}
+
+		100% {
+			transform: translateX(-100%);
+		}
+	}
 }
 
 /* Global Styles */
 body {
-    background-color: var(--color-shopify-dark);
-    color: white;
-    -webkit-font-smoothing: antialiased;
+	background-color: var(--color-shopify-dark);
+	color: white;
+	-webkit-font-smoothing: antialiased;
 }
 
 /* Hide scrollbar for chrome/safari/opera */
 .no-scrollbar::-webkit-scrollbar {
-    display: none;
+	display: none;
 }
 
 /* Hide scrollbar for IE, Edge and Firefox */
 .no-scrollbar {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+	-ms-overflow-style: none;
+	/* IE and Edge */
+	scrollbar-width: none;
+	/* Firefox */
 }
